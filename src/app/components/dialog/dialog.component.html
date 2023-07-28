@@ -1,0 +1,48 @@
+
+<div id="container">
+  <h2>Giỏ hàng</h2>
+
+  <form [formGroup]="itemFormGroups" id="item_form">
+      <label for="name">Name: </label>
+      <input id="name" type="text" formControlName="name" />
+      <label for="description">Description: </label>
+      <input id="description" type="text" formControlName="description" />
+      <label for="price">Price: </label>
+      <input id="price" type="text" formControlName="price" />
+      <label for="imgSrc">Image URL: </label>
+      <input id="imgSrc" type="text" formControlName="imgSrc" />
+      
+      <div class="example-button-container">
+        <button
+          mat-mini-fab
+          color="accent"
+          aria-label="Example icon button with a plus one icon"
+          (click)="addItem()"
+        >
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+  <div>
+    <button (click)="closeDialog()">Close</button>
+  </div>
+</form>
+  <div *ngFor="let item of itemList">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ item.name }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{ item.imgSrc }}" alt="Photo of a Shiba Inu" />
+      <mat-card-content>
+        <p>
+          {{ item.description }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
+</div>

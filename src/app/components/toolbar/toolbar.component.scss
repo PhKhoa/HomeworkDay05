@@ -1,0 +1,170 @@
+.mainHeader{
+    height: 90px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-header{
+    height: 90px;
+    width: 970px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+#dialog{
+    border-radius: 10px;
+    border: none;
+}
+
+#dialog > p{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.exit > span{
+    padding: 0px;
+    font-size: 16px;
+    margin: 0px;
+    display: flex;
+    justify-content: end;
+}
+
+.content-input{
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    padding: 5px;
+}
+
+.product-bill{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.bill-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bill-input > button{
+    height: 25px;
+    border: 0.5px solid grey;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.text-bill{
+    display: flex;
+    justify-content: start;
+}
+
+.btn-confirm{
+    display: flex;
+    justify-content: end;
+}
+
+
+
+
+.menulogo{
+    height: 90px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.menulogo > img {
+    width: 25px;
+    height: 25px;
+}
+
+.logo{
+    width: 150px;
+    height: 70px;
+}
+
+.logo > img {
+    width: 85px;
+    height: 70px;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+}
+
+.list > p{
+    margin: 10px;
+    font-size: 17px;
+}
+
+
+.search{
+    width: 200px;
+    height: 40px;
+    border: 1px solid #ececec;
+    background: #fff;
+    /* padding: 9px 9px 10px 50px; */
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+}
+
+.search > input{
+    height: 27px;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin: 8px;
+    color: #777777;
+    
+}
+
+.cart {
+    width: 58px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 15px;
+    cursor: pointer;
+}
+
+
+
+.cart > span{
+    font-size: 13px;
+}
+
+.cartlogo > img{
+    width: 25px;
+    height: 25px;
+}
+
+.shop-introduce > li {
+    list-style-type: none; /* Xóa dấu chấm */
+}
+
+.shop-introduce > li.active::before {
+    content: "/"; 
+    padding: 5px; 
+    
+  }
