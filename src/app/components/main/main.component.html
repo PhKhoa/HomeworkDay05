@@ -58,24 +58,26 @@
     </div>
 </div>
 <div class="listproduct">
-    <div class="row1">
-        <!-- <div class="product1">
+    <div class="row1" *ngFor="let product of productList">
+        <div class="product1">
             <div style="visibility: hidden;" class="order">
                 <span>Đặt hàng trước</span>
             </div>
-            <img src="https://product.hstatic.net/1000281824/product/img_9919_26d1c4e8cab84d928e701e71d21adb8b_large.jpeg" alt="">
+            <img [src]="product.imgSrc" alt="">
             <div class="detail">
                 <h3>
-                    <a href=""> Degrey Raglan Line Tee Đen - DRLD </a>
+                    <a href=""> {{product.name}} </a>
                 </h3>
                 
                 <div class="on-sale">
-                    <span class="price">240,000đ</span>
+                    <span class="price">{{product.price}}</span>
                     <span class="price-sale">350,000đ</span>
                 </div>
             </div>
+            <button (click)="delete(product.id)">delete</button>
         </div>
-        <div class="product1">
+    </div>
+        <!--<div class="product1">
             <div style="visibility: hidden;" class="order">
                 <span>Đặt hàng trước</span>
             </div>
@@ -155,12 +157,7 @@
                 </div>
             </div>
         </div> -->
-        
-        
-    </div>
-
     
-
     <div class="loadmore">
         <a href="">Xem thêm sản phẩm
             <b> tất cả sản phẩm</b>

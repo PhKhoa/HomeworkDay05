@@ -1,5 +1,3 @@
-
-
 <div class="mainHeader">
     <div class="flex-header">
         <div class="logo">
@@ -18,14 +16,8 @@
             <input type="text" placeholder="Tìm kiếm sản phẩm...">
         </div>
 
-        <div>
-            <button (click)="openDialog()">Open Dialog</button>
-        </div>
-        <div> <button (click)="show()">click</button></div>
-        
-
         <div class="cart">
-            <div onclick="showModal()" class="cartlogo">
+            <div (click)="openDialog()" class="cartlogo">
                 <img src="../../../assets/images/cart.png" alt="">
             </div>
             <span>Giỏ hàng</span>
@@ -63,3 +55,47 @@
         </div>
     </div>
 </div>
+
+
+<dialog #appDialog>
+    <form class="form" [formGroup]="productForm">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          formControlName="name"
+          placeholder="Enter name"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="number"
+          class="form-control"
+          id="price"
+          formControlName="price"
+          placeholder="Enter price"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="quantity"
+          formControlName="image"
+          placeholder="Enter image"
+        />
+      </div>
+    </form>
+    <div class="btn">
+      <button mat-button mat-dialog-close (click)="closeDialog()">Close</button>
+      <button
+        (click)="addProduct(productForm.value)"
+        mat-flat-button
+        color="primary"
+      >
+        Submit
+      </button>
+    </div>
+  </dialog>
+  

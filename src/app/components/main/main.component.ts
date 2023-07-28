@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,Input,Output, EventEmitter } from '@angular/core';
+import { Product } from 'src/app/materials/item.model';
 
 @Component({
   selector: 'app-main',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+  constructor() {}
+  @Output() newItemEvent = new EventEmitter<number>();
+  @Input('productList')
+  productList!: Product[];
 
+  
+  delete(value: number){
+    this.newItemEvent.emit(value);
+  }
 }
