@@ -17,7 +17,7 @@ export class AppComponent implements OnInit{
       name: new FormControl('', [Validators.required]),
       price: new FormControl('', [Validators.required]),
       //brand: new FormControl('', [Validators.required]),
-      image: new FormControl(
+      imgSrc: new FormControl(
         'https://product.hstatic.net/1000281824/product/img_9919_26d1c4e8cab84d928e701e71d21adb8b_large.jpeg'
       ),
     });
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit{
     {
       id: Date.now(),
       name: 'Degrey Raglan Line Tee Đen - DRLD',
-      price: 120,
+      price: 100,
       //brand: 'Yeezy',
       imgSrc: 'https://product.hstatic.net/1000281824/product/img_9919_26d1c4e8cab84d928e701e71d21adb8b_large.jpeg',
     },

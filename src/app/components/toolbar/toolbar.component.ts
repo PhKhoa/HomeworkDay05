@@ -44,8 +44,8 @@ export class ToolbarComponent implements OnInit,OnDestroy{
       name: new FormControl('', [Validators.required]),
       price: new FormControl('', [Validators.required]),
       //brand: new FormControl('', [Validators.required]),
-      image: new FormControl(
-        '', [Validators.required]
+      imgSrc: new FormControl(
+        '', [Validators.required],
       ),
     });
   }
